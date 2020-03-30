@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+    let hours;
+    let minutes;
+    let seconds;
+    for (var i = 0; i < 3; i++) {
+        if(i===1){
+            hours="hour";
+        }else{
+            hours="hours"
+        }
+        for (var j = 0; j < 60;) {
+            if(i === 2 && j === 20){
+                break;
+            }
+            if(j===1){
+                minutes="minute";
+            }else{
+                minutes="minutes"
+            }
+            for (var k = 1; k < 61; k++) {
+                if(k===0){
+                    seconds="second";
+                }else{
+                    seconds="seconds"
+                }
+                if(k===60){
+                    j++
+                    document.write(i+" "+hours+" "+j+" "+minutes+" "+" 0"+seconds+" <br>");
+                }else{
+                    document.write(i+" "+hours+" "+j+" "+minutes+" "+k+" "+seconds+" <br>");
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let array;
+        let count;
+        let word;
+        let array1;
+        let min;
+        let max;
+        // /*
+        // --створити масив та вивести його в консоль:
+        // - з 5 числових значень
+        // - з 5 стічкових значень
+        // - з 5 значень стрічкового, числового та булевого типу
+        // -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
+        //  */
+        // array=[1,22,8,10,0];
+        // console.log(array);
+        // array=['Lorem','ipsum','dolor','sit','amet'];
+        // console.log(array);
+        // array=[2, true,'ipsum', false, 10];
+        // console.log(array);
+
+        // array=[];
+        // array[0]=5;
+        // array[10]=5;
+        // array[20]=5;
+        // array[30]=5;
+        // array[21]=5;
+        //
+        // console.log(array);
+
+        //
+        // // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
+        // let numberOfItems =10;
+        //
+        // for (let i=0; i<numberOfItems; i++){
+        //     document.write("<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolor illum libero minima nobis.</div>");
+        // }
+        // //- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
+        // for (let i=0; i<numberOfItems; i++){
+        //     document.write("<div>"+i+" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolor illum libero minima nobis.</div>")
+        // }
+        // // - За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.
+        // count=0;
+        // numberOfItems=20;
+        // while (count<numberOfItems){
+        //     document.write("<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolor illum libero minima nobis.</h1>");
+        //     count++;
+        // }
+        // //- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.
+        // count=0;
+        // while (count<numberOfItems){
+        //     document.write("<h1>"+count+" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate dolor illum libero minima nobis.</h1>")
+        //     count++;
+        // }
+        //
+        // //- Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+        // array=[1,22,8,10,0,2,9,54,14,30];
+        // for (let i=0;i<array.length;i++){
+        //     console.log(array[i]);
+        // }
+        //
+        // //- Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+        // array=['Lorem','ipsum','dolor','sit','amet','consectetur','adipisicing','elit.','Cupiditate','dolor'];
+        // for (let i=0;i<array.length;i++){
+        //     console.log(array[i]);
+        // }
+        //
+        // //- Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+        // array=['Lorem',2,'dolor',true,'amet',false,3,'3','Cupiditate','dolor'];
+        // for(let i=0;i<array.length;i++){
+        //     console.log(array[i]);
+        // }
+
+        // //- Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+        // array=['true',2,false,true,'amet',false,3,'3','dolor','dolor'];
+        // for (let i = 0; i < array.length; i++){
+        //     if(typeof array[i] === "boolean"){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // //- Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+        // array=['2',2,'dolor',true,'amet',false,3,'3',20,'dolor'];
+        // for (let i = 0; i < array.length; i++){
+        //     if(typeof array[i] === "number"){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // // //- Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+        // array=['true',2,'dolor',true,'amet',false,3,'3','Cupiditate','dolor'];
+        // for (let i = 0; i < array.length; i++){
+        //     if(typeof array[i] === "string"){
+        //         console.log(array[i]);
+        //     }
+        // }
+
+        //- Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+        // array=[];
+        // array[0]=4;
+        // array[1]='Lorem';
+        // array[2]=56;
+        // array[3]=false;
+        // array[4]='true';
+        // array[5]=true;
+        // array[6]=23;
+        // array[7]='amet';
+        // array[8]=false;
+        // array[9]='dolor';
+        // for (let i=0;i<array.length;i++){
+        //     console.log(array[i]);
+        // }
+
+        //- Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+        // for (let i = 0; i < 10; i++) {
+        //     console.log(i);
+        //     document.write(i);
+        // }
+        //
+        // //- Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+        // for (let i = 0; i < 100; i++) {
+        //     console.log(i);
+        //     document.write(i);
+        // }
+        // - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+        // for (let i = 0; i < 100; i=i+2) {
+        //     console.log(i);
+        //     document.write(i);
+        // }
+        // - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+        for (let i = 0; i < 100; i++) {
+            if(i%2 === 0){
+                console.log(i);
+                document.write(i);
+            }
+        }
+        // for (let i = 0; i < 100; i++) {
+        //     if(!(i%2)){
+        //         console.log(i);
+        //         document.write(i);
+        //     }
+        // }
+        // - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+        // for (let i = 0; i < 100; i++) {
+        //     if(i%2 !== 0){
+        //         console.log(i);
+        //         document.write(i);
+        //     }
+        // }
+        // for (let i = 0; i < 100; i++) {
+        //     if(!!(i%2)){
+        //         console.log(i);
+        //         document.write(" |"+i+"| ");
+        //     }
+        // }
+        // - Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
+        // for (let i = 0; i < 2; i++) {
+        //     for (let j = 0; j < 60; j++) {
+        //         console.log(i+"  minutes " + j +" seconds")
+        //     }
+        // }
+        // - Відтворити роботу годинника, відрахувавши  2 години 20 хвилини (3 цикли! 1й - години, 2й - хвилини, 3й - секунди)
+
+        // Додатково
+        // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
+        // array = [ 'a', 'b', 'c'];
+        // word = "";
+        // for (let i=0; i<array.length; i++){
+        //     word = word + array[i];
+        // }
+        // console.log(word);
+        // //- Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+        // array = [ 'a', 'b', 'c'];
+        // word = "";
+        // count = 0;
+        // while (count<array.length){
+        //     word = word + array[count];
+        //     count++;
+        // }
+        // console.log(word);
+        // // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+        // array = [ 'a', 'b', 'c'];
+        // word = "";
+        // for(let element of array){
+        //     word = word + element;
+        // }
+        // console.log(word);
+        // // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+        // array = [ 'a', 'b', 'c'];
+        // word = "";
+        // for(let element of array){
+        //     word = word + element;
+        // }
+        // console.log(word);
+
+        // =================
+        // =================
+        // =================
+        // =================
+        // - Дан масив ['a', 'b', 'c']. Додайте йому в кінець елементи 1, 2, 3 за допомогою циклу.
+        // array = [ 'a', 'b', 'c'];
+        // array1 = [ 1, 2, 3];
+        // for (let i = 0; i < array1.length; i++) {
+        //     array.push(array1[i]);
+        // }
+        // console.log(array);
+        // // - Дан масив [1, 2, 3]. Зробіть з нього новий масив [3, 2, 1].
+        // array = [1, 2, 3];
+        // array1=[];
+        // for (let i = 0; i < array.length; i++) {
+        //     array1[array.length-1-i]=array[i];
+        // }
+        // console.log(array1);
+        // // - Дан масив [1, 2, 3]. Додайте йому в кінець елементи 4, 5, 6.
+        // array = [ 1, 2, 3];
+        // array1 = [ 4, 5, 6];
+        // for (let i = 0; i < array1.length; i++) {
+        //     array.push(array1[i]);
+        // }
+        // console.log(array);
+        // // - Дан масив [1, 2, 3]. Додайте йому в початок елементи 4, 5, 6.
+        // array = [ 1, 2, 3];
+        // array1 = [ 4, 5, 6];
+        // for (let i = 0; i < array1.length; i++) {
+        //     array.unshift(array1[array1.length-1-i]);
+        // }
+        // console.log(array);
+        // // - Дан масив ['js', 'css', 'jq']. Виведіть на екран перший елемент за допомогою shift()
+        // array = ['js', 'css', 'jq'];
+        // console.log(array.shift());
+        // // - Дан масив ['js', 'css', 'jq']. Виведіть на екран останній елемент за допомогою pop()
+        // array = ['js', 'css', 'jq'];
+        // console.log(array.pop());
+        // // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [4, 5].
+        // array = [1, 2, 3, 4, 5];
+        // array = array.slice(3);
+        // console.log(array);
+        // // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції slice перетворіть масив в [1,2].
+        // array = [1, 2, 3, 4, 5];
+        // array = array.slice(0,2);
+        // console.log(array);
+        // // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice перетворіть масив в [1, 4, 5].
+        // array = [1, 2, 3, 4, 5];
+        // array.splice(1,2);
+        // console.log(array);
+        // // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 2, 3, 'a', 'b', 'c', 4, 5].
+        // array = [1, 2, 3, 4, 5];
+        // array.splice(3,0,'a', 'b', 'c');
+        // console.log(array);
+        // // - Дан масив [1, 2, 3, 4, 5]. За допомогою методу/функції splice зробіть з нього масив [1, 'a', 'b', 2, 3, 4, 'c', 5, 'e'].
+        // array = [1, 2, 3, 4, 5];
+        // array.splice(1,0,'a', 'b');
+        // array.splice(6,0,'c');
+        // array.splice(8,0,'c');
+        // console.log(array);
+        // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
+        // array = [4,1,5,8,12,65,48,78,2,10];
+        // for (let i = 0; i < array.length; i++) {
+        //     if(array[i]%2 === 0){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу та push () скопіювати значення одного масиву в інший
+        // array = [4,1,5,8,12,65,48,78,2,10];
+        // array1 = [];
+        // for (let i = 0; i < array.length; i++) {
+        //     array1.push(array[i]);
+        // }
+        // console.log(array1);
+        // - Взяти масив з 10 чисел або створити його. Створити 2й порожній масив. За допомогою будь-якого циклу скопіювати значення одного масиву в інший.
+        // array = [4,1,5,8,12,65,48,78,2,10];
+        // array1 = [];
+        // for (let i = 0; i < array.length; i++) {
+        //     array1[i] = array[i];
+        // }
+        // console.log(array1);
+
+        // ============
+        //
+        // зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
+        //     1. перебрати його циклом while
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // count = 0;
+        // while (count<array.length){
+        //     console.log(array[count]);
+        //     count++;
+        // }
+        // //     2. перебрати його циклом for
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = 0; i < array.length; i++) {
+        //     console.log(array[i]);
+        // }
+        // //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // count = 0;
+        // while (count<array.length){
+        //     if(count%2 === 0){
+        //         console.log(array[count]);
+        //     }
+        //     count++;
+        // }
+        // // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = 0; i < array.length; i++) {
+        //     if(i%2 !== 0){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // 5. перебрати циклом while та вивести  числа тільки парні  значення
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // count = 0;
+        // while (count<array.length){
+        //     if(array[count]%2 === 0){
+        //         console.log(array[count]);
+        //     }
+        //     count++;
+        // }
+        // // 6. перебрати циклом for та вивести  числа тільки парні  значення
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = 0; i < array.length; i++) {
+        //     if(array[i]%2 === 0){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // // 7. замінити кожне число кратне 3 на слово "okten"
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = 0; i < array.length; i++) {
+        //     if(array[i]%3 === 0){
+        //         array[i] = "okten";
+        //     }
+        // }
+        // console.log(array);
+        // // 8. вивести масив в зворотньому порядку.
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = 0; i < array.length; i++) {
+        //     console.log(array[array.length-1-i]);
+        // }
+        // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+        // 1. перебрати його циклом while
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // count = array.length-1;
+        // while (count>=0){
+        //     console.log(array[count]);
+        //     count--;
+        // }
+        // //     2. перебрати його циклом for
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = array.length-1; i >=0; i--) {
+        //     console.log(array[i]);
+        // }
+        // //     3. перебрати циклом while та вивести  числа тільки з непарним індексом
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // count = array.length-1;
+        // while (count>=0){
+        //     if(count%2 === 0){
+        //         console.log(array[count]);
+        //     }
+        //     count--;
+        // }
+        // // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i =  array.length-1; i >= 0; i--) {
+        //     if(i%2 !== 0){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // 5. перебрати циклом while та вивести  числа тільки парні  значення
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // count = array.length-1;
+        // while (count>=0){
+        //     if(array[count]%2 === 0){
+        //         console.log(array[count]);
+        //     }
+        //     count--;
+        // }
+        // // 6. перебрати циклом for та вивести  числа тільки парні  значення
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = array.length; i >= 0 ; i--) {
+        //     if(array[i]%2 === 0){
+        //         console.log(array[i]);
+        //     }
+        // }
+        // // 7. замінити кожне число кратне 3 на слово "okten"
+        // array = [2,17,13,6,22,31,45,66,100,-18];
+        // for (let i = array.length-1; i >= 0 ; i--) {
+        //     if(array[i]%3 === 0){
+        //         array[i] = "okten";
+        //     }
+        //     console.log(array[i]);
+        // }
+        // console.log(array);
+        // 10
+        // створити пустий масив та :
+        //     - заповнити його 50 парними числами за допомоги циклу.
+        // count = 50;
+        // array = [];
+        // for (let i = 0; i < count; i++) {
+        //     array[i] = (i+1)*2;
+        // }
+        // console.log(array);
+        // // - заповнити його 50 непарними числами за допомоги циклу.
+        // count = 50;
+        // array = [];
+        // for (let i = 0; i < count; i++) {
+        //     array[i] = (i+1)*2+1;
+        // }
+        // console.log(array);
+        // створити пустий масив та :
+        //     1. заповнити його 50 парними числами за допомоги циклу.
+        // 2. заповнити його 50 непарними числами за допомоги циклу.
+        // 3. используя Math.random заполнить массив из ???(сколько хотите) элементов.
+        count = 10;
+        array = [];
+        for (let i = 0; i < count; i++){
+            array[i] = Math.random();
+        }
+        console.log(array);
+        document.write(array);
+        //     диапазон рандома 8 до 732. (но сначала пробуйте БЕЗ ДИАПАЗОНА!)
+        document.write("<br>");
+        document.write("<br> диапазон рандома 8 до 732. <br>");
+        count = 10;
+        min = 8;
+        max = 732;
+        array = [];
+        for (let i = 0; i < count; i++){
+            array[i] = Math.round(Math.random() * (max - min) + min);
+        }
+        console.log(array);
+        document.write(array);
+        // 2. вывести на консоль  каждый третий елемент
+        document.write("<br>");
+        document.write("<br> вывести на консоль  каждый третий елемент <br>");
+        for (let i = 0; i < count; i++) {
+            if(i%3 === 0){
+                console.log(array[i]);
+                document.write(array[i] + " ");
+            }
+        }
+        // 3. вывести на консоль  каждый третий елемент
+        // но при условии что его значение является парным.
+        document.write("<br>");
+        document.write("<br> вывести на консоль  каждый третий елемент, но при условии что его значение является парным. <br>");
+        for (let i = 0; i < count; i++) {
+            if(i%3 === 0 && array[i]%2 === 0 ){
+                console.log(array[i]);
+                document.write(array[i] + " ");
+            }
+        }
+        // 4. вывести на консоль  каждый третий елемент
+        // но при условии что он имеет парное значение и
+        // записать их в другой массив.
+        document.write("<br>");
+        document.write("<br> вывести на консоль  каждый третий елемент, но при условии что он имеет парное значение и записать их в другой массив.<br>");
+        array1 = [];
+        for (let i = 0; i < count; i++) {
+            if(i%3 === 0 && array[i]%2 === 0 ){
+                array1.push(array[i]);
+                console.log(array[i]);
+            }
+        }
+        document.write(array1);
+        console.log(array1);
+        // 5. Вывести каждый елемент массива у которого соседний с права элемент - парный
+        document.write("<br>");
+        document.write("<br> Вывести каждый елемент массива у которого соседний с права элемент - парный <br>");
+        for (let i = 0; i < count-1; i++) {
+            if(array[i+1]%2 === 0 ){
+                console.log(array[i]);
+                document.write(array[i] + " ");
+            }
+        }
+        // 5 масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. обрахувати середній чек.
+        document.write("<br>");
+        document.write("<br>  масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. обрахувати середній чек. <br>");
+
+        array = [100,250,50,168,120,345,188];
+        averageCheck = 0;
+        for (let i = 0; i < array.length; i++) {
+            averageCheck = averageCheck + array[i];
+        }
+        averageCheck = averageCheck/array.length;
+        document.write(averageCheck);
+
+        // 3 створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+        document.write("<br>");
+        document.write("<br> створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.<br>");
+        count = 10;
+        min = 1;
+        max = 20;
+        array = [];
+        array1 = [];
+        for (let i = 0; i < count; i++){
+            array[i] = Math.round(Math.random() * (max - min) + min);
+        }
+        document.write(array);
+        document.write("<br>");
+        for (let i = 0; i < count; i++){
+            array[i] = array[i]*5;
+            array1[i] = array[i]
+        }
+        document.write(array1);
+        // 4 створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо об'єкт є числом,
+        // додати його в інший масив.
+        document.write("<br>");
+        document.write("<br> створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо об'єкт є числом, додати його в інший масив.<br>");
+        array = ['Lorem','ipsum','dolor','sit','amet','consectetur','adipisicing',45,'Cupiditate','dolor','Lorem',2,'dolor',true,'amet',false,3,'3a','Cupiditate','dolor'];
+        array1 = [];
+        for (let i = 0; i < array.length; i++){
+            if(typeof array[i] === "number"){
+                array1.push(array[i]);
+            }
+        }
+        document.write(array);
+        document.write("<br>");
+        document.write(array1);
+    </script>
+</body>
+</html>
