@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!--<textarea name="textArea" id="textArea"></textarea>-->
+<!--<br>-->
+
+<!--<form name="checkForm">-->
+<!--    <label>name</label>-->
+<!--    <input type="text" name="name"><br>-->
+<!--    <label>email</label>-->
+<!--    <input type="text" name="email"><br>-->
+<!--    <br>-->
+<!--    <label>Status Check</label>-->
+<!--    <input name="statusCheck" type="checkbox" id="statusCheck"><br>-->
+<!--    <br>-->
+<!--    <input type="radio" name="radio" value="radio1"><label>radio1</label>-->
+<!--    <input type="radio" name="radio" value="radio2"><label>radio2</label>-->
+<!--    <br><br>-->
+<!--    <label>textarea 1</label><br>-->
+<!--    <textarea name="textarea1"></textarea>-->
+<!--    <br><br>-->
+<!--    <label>textarea 2</label><br>-->
+<!--    <textarea name="textarea2"></textarea>-->
+<!--</form>-->
+
+<!--<form name="subVersionText">-->
+<!--    <button name="back" type="button"><-</button>-->
+<!--    <button name="forward" type="button">-></button>-->
+<!--    <br><br>-->
+<!--    <textarea name="text" rows="20" cols="50"></textarea>-->
+<!--    <br><br>-->
+<!--    <button name="save" type="button">Save</button>-->
+<!--</form>-->
+
+<form name="addressBook" id="addressBook">
+    <input type="hidden" value="" = "" name="contactsID">
+    <label>
+        <input type="text" name="name" placeholder="John Doe" />
+    </label>
+    <label>
+        <input type="tel" name="phone" placeholder="123-45-678"/>
+    </label>
+    <label>
+        <input type="email" name="email" placeholder="johndor@example.com" />
+    </label>
+    <label>
+        <input type="text" name="company" placeholder="Company" />
+    </label>
+    <label>
+        <input type="text" name="department" placeholder="Department" />
+    </label>
+    <label>
+        <input type="date" name="birthday" placeholder="birthday: 1999-01-01" />
+    </label>
+    <button name="save" type="button">Save</button>
+</form>
+<div id="addressBookDiv"></div>
+<script src="./scripts/script.js"></script>
+</body>
+</html>
